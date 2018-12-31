@@ -7,7 +7,7 @@ une seule lettre"""
 
     alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
     while not(x.__len__() == 1 and x.upper() in alphabet):
-        x = input("SVP veuillez entrer une lettre ! :  ")
+        x = input("\nSVP veuillez entrer une lettre ! :  ")
     x = x.upper()
     return x
 
@@ -49,6 +49,7 @@ def sauvegarde(prenom, score):
 dans un fichier sous forme de dictionnaire"""
 
     import pickle
+    prenom = prenom.upper()
     with open('scores', 'rb') as fichier:
         monDepickler = pickle.Unpickler(fichier)
     with open('scores', 'rb') as fichier:
@@ -67,6 +68,7 @@ def vSauvegarde(prenom):
 nom"""
 
     import pickle
+    prenom = prenom.upper()
     with open('scores', 'rb') as fichier:
         monDepickler = pickle.Unpickler(fichier)
     with open('scores', 'rb') as fichier:
@@ -84,6 +86,7 @@ def restauration(prenom):
 nom"""
 
     import pickle
+    prenom = prenom.upper()
     with open('scores', 'rb') as fichier:
         monDepickler = pickle.Unpickler(fichier)
     with open('scores', 'rb') as fichier:
@@ -102,6 +105,7 @@ def delSauvegarde(prenom):
 permettre de jouer une nouvelle partie"""
 
     import pickle
+    prenom = prenom.upper()
     with open('scores', 'rb') as fichier:
         monDepickler = pickle.Unpickler(fichier)
     with open('scores', 'rb') as fichier:
@@ -113,3 +117,19 @@ permettre de jouer une nouvelle partie"""
     with open('scores', 'wb') as fichier:
         monPickler = pickle.Pickler(fichier)
         monPickler.dump(scores)
+
+
+# def player(scores):
+    # """ Faire une fonction qui renvoie le nombre de joueurs """
+
+
+
+
+# def bestOne(scores):
+    # """Faire une fonction qui renvoie deux variables : le nom et le score du meilleur joueur"""
+
+
+
+
+# def meilleursScores(scores):
+    # """ Faire une fonction qui affiche le classement des meilleurs joueurs dans l'ordre décroissant en fonction de leur score """
